@@ -29,9 +29,10 @@ export const Button = styled.button`
   border: none;
   color: ${(props) => props.theme.background};
   font-size: 1.3rem;
+  margin-bottom:1rem;
 `;
 export const Result = styled.h2`
-  margin: 2rem;
+  /* margin: 1rem; */
 `;
 
 export const Linha = styled.section`

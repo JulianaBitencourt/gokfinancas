@@ -7,6 +7,9 @@ export default function CalculoClt() {
   const [salario, setSalario] = useState(0);
   const [beneficio, setBeneficio] = useState(0);
   const [imposto, setImposto] = useState(0);
+  const [resultado, setResultado] = useState(0);
+
+  const calculo = () => {};
 
   return (
     <Container>
@@ -39,9 +42,8 @@ export default function CalculoClt() {
           ></Input>
         </div>
       </Linha>
-      <Button>Calcular</Button>
-
-      <Result>Total: $00000</Result>
+      <Button onClick={calculo}>Calcular</Button>
+      <Result>Total:{resultado}</Result>
     </Container>
   );
 }

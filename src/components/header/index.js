@@ -1,9 +1,10 @@
-import React from 'react';
-
+import React from "react";
+import { Container, Logo } from "./styled";
+import logo from "./../../assets/logogok.png";
 export default function Header() {
- return (
-   <div>
-<h5>logo</h5>
-   </div>
- );
+  return (
+    <Container>
+      <Logo src={logo} alt="GOK" />
+    </Container>
+  );
 }

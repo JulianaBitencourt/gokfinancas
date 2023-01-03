@@ -1,3 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.header`
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  justify-content: start;
+  flex-direction: row;
+`;
+
+export const Logo = styled.img`
+  width: 10rem;
+`;

@@ -3,12 +3,13 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
 
  body {
-  ${'' /* width: 70vw; */}
   height: 100vh;
-  ${'' /* background: ${(props) => props.theme.White}; */}
-  font-family: 'Rubik', sans-serif;
+  background: ${(props) => props.theme.background};
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
   font-size:18px;
-  ${'' /* color: ${(props) => props.theme.Dark}; */}
+  color: ${(props) => props.theme.text};
  }
 
  button, a{

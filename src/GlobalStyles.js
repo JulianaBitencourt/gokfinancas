@@ -12,21 +12,15 @@ export const GlobalStyles = createGlobalStyle`
   color: ${(props) => props.theme.text};
  }
 
- button, a{
-  border-radius: 0.2rem; 
+ button{
   cursor: pointer;
-  transition: 1s;
-  :hover {
-    transition: 0.5s;
-    background-color: transparent;}
  }
 
  *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline-color:#38D430;
+  outline-color:${(props) => props.theme.primary};
   text-decoration:none;
-  color:inherit;
 }
 `;

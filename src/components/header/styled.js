@@ -6,7 +6,7 @@ export const Container = styled.header`
   top: 0;
   left: 0;
   padding: 2rem;
-  justify-content: start;
+  justify-content: center;
   flex-direction: row;
 `;
 

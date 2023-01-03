@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-display: flex;
+  display: flex;
   justify-content: center;
   bottom: 0;
   left: 0;
@@ -10,5 +10,5 @@ display: flex;
 `;
 
 export const Logo = styled.img`
-width:22rem;
+  width: 27rem;
 `;

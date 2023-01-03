@@ -1,13 +1,12 @@
-import React from "react";
-import Select from "react-select";
+import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
-import { Container, Selects, Linha, } from "./styled";
+import CalculoClt from "../calculoClt";
+import CalculoPj from "../calculoPj";
+import { Container, Selects, Modalidade, Button } from "./styled";
 
 export default function Home() {
-  const options = [
-    { value: "pj", label: "PJ" },
-    { value: "clt", label: "CLT" },
-  ];
+  const [opcao, setOpcao] = useState("");
+
   return (
     <Container>
       <h2>
@@ -17,43 +16,15 @@ export default function Home() {
           }}
         />
       </h2>
-      
-      <h4>Selecione a modalidade de contratação:</h4>
-      <Selects>
-        <Select options={options} />
-      </Selects>
-      <Linha>
-        <div>
-          <h4>Digite o salario CLT:</h4>
-          <input placeholder="Digite..." type={"number"}></input>
-        </div>
-        <div>
-          <h4>Beneficio Flash</h4>
-          <input placeholder="Digite..." type={"number"}></input>
-        </div>
-        <div>
-          <h4>Imposto+Beneficio(conta aqui+modal)</h4>
-        </div>
-      </Linha>
-      <button>Calcular</button>
+      <Modalidade>
+        <h4>Selecione a modalidade de contratação:</h4>
+        <Selects>
+          <Button onClick={() => setOpcao("clt")}>CLT</Button>
+          <Button onClick={() => setOpcao("pj")}>PJ</Button>
+        </Selects>
+      </Modalidade>
 
-      <h2>Total: $00000</h2>
-      {/* <Linha>
-        <div>
-          <h4>Digite o salario PJ:</h4>
-          <input placeholder="Digite..." type={"number"}></input>
-        </div>
-        <div>
-          <h4>Beneficio Flash</h4>
-          <input placeholder="Digite..." type={"number"}></input>
-        </div>
-        <div>
-          <h4>Outros</h4>
-          <input placeholder="Digite..." type={"number"}></input>
-        </div>
-      </Linha>
-      <button>Calcular</button>
-      <h2>Total GOK: $00000</h2> */}
+      {opcao === "clt" ? <CalculoClt /> : <CalculoPj />}
     </Container>
   );
 }

@@ -12,7 +12,7 @@ export default function Home() {
       <h2>
         <Typewriter
           onInit={(typewriter) => {
-            typewriter.typeString("Bem-vindo, Goker").start();
+            typewriter.typeString("Bem-vindo(a), Goker").start();
           }}
         />
       </h2>

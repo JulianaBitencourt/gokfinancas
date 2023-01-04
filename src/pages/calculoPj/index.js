@@ -1,7 +1,14 @@
 import React from "react";
 import { useState } from "react";
 
-import { Titulo, Linha, Input, Button, Container, Result } from "./styled";
+import {
+  Titulo,
+  Linha,
+  Input,
+  Button,
+  Container,
+  Result,
+} from "./../../components/calcStyles/styled";
 
 export default function CalculoClt() {
   const [salario, setSalario] = useState(0);

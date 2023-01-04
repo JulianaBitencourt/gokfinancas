@@ -14,6 +14,12 @@ export const GlobalStyles = createGlobalStyle`
 
  button{
   cursor: pointer;
+  transition: 1s;
+  :hover {
+    transition: 0.5s;
+    background-color: #008000;}
+ }
+
  }
 
  *{

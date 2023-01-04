@@ -51,7 +51,7 @@ export default function CalculoClt() {
       </Linha>
       <Button onClick={calculo}>Calcular</Button>
 
-      <Result>Total:{resultado}</Result>
+      <Result>Total: R${resultado}</Result>
     </Container>
   );
 }

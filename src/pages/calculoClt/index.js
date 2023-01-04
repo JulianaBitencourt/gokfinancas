@@ -41,16 +41,11 @@ export default function CalculoClt() {
         </div>
         <div>
           <Titulo>Imposto + Beneficio</Titulo>
-          <Input
-            placeholder="Digite o valor..."
-            type={"number"}
-            value={imposto}
-            onChange={(e) => setImposto(e.target.value)}
-          ></Input>
+          <Titulo>{imposto}</Titulo>
         </div>
       </Linha>
       <Button onClick={calculo}>Calcular</Button>
-      <Result>Total:{resultado}</Result>
+      <Result>Total: R${resultado}</Result>
     </Container>
   );
 }

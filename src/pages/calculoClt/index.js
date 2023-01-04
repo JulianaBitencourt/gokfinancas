@@ -22,7 +22,7 @@ export default function CalculoClt() {
     <Container>
       <Linha>
         <div>
-          <Titulo>Digite o salario CLT:</Titulo>
+          <Titulo>Digite o salário CLT:</Titulo>
 
           <CurrencyInput
             className="inputs"
@@ -33,7 +33,7 @@ export default function CalculoClt() {
           />
         </div>
         <div>
-          <Titulo>Beneficio Flash</Titulo>
+          <Titulo>Benefício Flash</Titulo>
           <CurrencyInput
             className="inputs"
             placeholder="R$ 0.00"
@@ -43,7 +43,7 @@ export default function CalculoClt() {
           />
         </div>
         <div>
-          <Titulo>Imposto + Beneficio</Titulo>
+          <Titulo>Imposto + Benefício</Titulo>
           <Titulo>R$ {imposto}</Titulo>
         </div>
       </Linha>

@@ -21,7 +21,7 @@ export default function CalculoClt() {
     <Container>
       <Linha>
         <div>
-          <Titulo>Digite o salario PJ:</Titulo>
+          <Titulo>Digite o salário PJ:</Titulo>
           <CurrencyInput
             className="inputs"
             placeholder="R$ 0.00"
@@ -31,7 +31,7 @@ export default function CalculoClt() {
           />
         </div>
         <div>
-          <Titulo>Beneficio Flash</Titulo>
+          <Titulo>Benefício Flash</Titulo>
           <CurrencyInput
             className="inputs"
             placeholder="R$ 0.00"

@@ -6,7 +6,7 @@ export const Container = styled.div`
   border-color: ${(props) => props.theme.foreground};
   border-radius: 1rem;
   .inputs {
-    padding: 0.6rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border: none;
@@ -21,7 +21,7 @@ export const Titulo = styled.h4`
 
 export const Button = styled.button`
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  padding: 0.4rem;
+  padding: 0.8rem;
   width: 14rem;
   background-color: ${(props) => props.theme.primary};
   border-radius: 0.6rem;

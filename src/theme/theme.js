@@ -5,4 +5,5 @@ export const theme = {
   backgroundLightMenu: "#FCFEFF",
   text: "#e1e1e6",
   primary: "#38D430",
+  green: "#008000",
 };

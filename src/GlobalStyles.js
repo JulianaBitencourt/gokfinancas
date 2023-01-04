@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-
  body {
   height: 100vh;
   background: ${(props) => props.theme.background};
@@ -17,10 +16,11 @@ export const GlobalStyles = createGlobalStyle`
   transition: 1s;
   :hover {
     transition: 0.5s;
-    background-color: #008000;}
+    background-color:${(props) => props.theme.green};
+    }
  }
 
- }
+ 
 
  *{
   margin: 0;
@@ -29,4 +29,4 @@ export const GlobalStyles = createGlobalStyle`
   outline-color:${(props) => props.theme.primary};
   text-decoration:none;
 }
-`;
+`

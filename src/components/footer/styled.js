@@ -8,5 +8,5 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 28rem;
+  width: 29rem;
 `;

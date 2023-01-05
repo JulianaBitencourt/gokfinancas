@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
  body {
+  height: 100vh;
   background: ${(props) => props.theme.background};
   font-family: "Mulish";
   font-style: normal;

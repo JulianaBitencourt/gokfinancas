@@ -7,6 +7,7 @@ export const Container = styled.div`
   border-color: ${(props) => props.theme.foreground};
   border-radius: 1rem;
   width: 50rem;
+  margin-bottom:2rem;
   @media (max-width: 600px) {
     width: 100%;
   }

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  position: relative;
+  position: static;
   bottom: 0;
   width: 100%;
+  text-align: center;
 `;
 
 export const Logo = styled.img`

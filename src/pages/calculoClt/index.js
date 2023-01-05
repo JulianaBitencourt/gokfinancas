@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import CurrencyInput from "react-currency-masked-input";
-
+import CurrencyInput from './../../components/input-currency/currencyInput'
 import {
   Titulo,
   Linha,
@@ -25,11 +24,9 @@ export default function CalculoClt() {
           <Titulo>Digite o salário CLT:</Titulo>
 
           <CurrencyInput
-            prefix="$"
-            decimalsLimit="2"
             className="inputs"
             placeholder="R$ 0.00"
-            type={"number"}
+            type={"text"}
             // value={salario}
             onChange={(e) => setSalario(e.target.value)}
           />
@@ -39,7 +36,7 @@ export default function CalculoClt() {
           <CurrencyInput
             className="inputs"
             placeholder="R$ 0.00"
-            type={"number"}
+            type={"text"}
             // value={beneficio}
             onChange={(e) => setBeneficio(e.target.value)}
           />

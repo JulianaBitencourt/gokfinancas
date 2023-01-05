@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
  body {
-  height: 100vh;
   background: ${(props) => props.theme.background};
   font-family: "Mulish";
   font-style: normal;
@@ -20,8 +19,6 @@ export const GlobalStyles = createGlobalStyle`
     }
  }
 
- 
-
  *{
   margin: 0;
   padding: 0;
@@ -29,4 +26,4 @@ export const GlobalStyles = createGlobalStyle`
   outline-color:${(props) => props.theme.primary};
   text-decoration:none;
 }
-`
+`;

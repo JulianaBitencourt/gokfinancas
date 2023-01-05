@@ -3,11 +3,14 @@ import Typewriter from "typewriter-effect";
 import CalculoClt from "../calculoClt";
 import CalculoPj from "../calculoPj";
 import { Container, Selects, Modalidade, Button } from "./styled";
-
+import Footer from "./../../components/footer";
+import Header from "./../../components/header";
 export default function Home() {
   const [opcao, setOpcao] = useState("");
 
   return (
+    <div>
+    <Header/>
     <Container>
       <h2>
         <Typewriter
@@ -26,5 +29,7 @@ export default function Home() {
 
       {opcao === "clt" ? <CalculoClt /> : <CalculoPj />}
     </Container>
+    <Footer/>
+    </div>
   );
 }

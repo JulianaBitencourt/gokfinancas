@@ -25,6 +25,8 @@ export default function CalculoClt() {
           <Titulo>Digite o salário CLT:</Titulo>
 
           <CurrencyInput
+            prefix="$"
+            decimalsLimit="2"
             className="inputs"
             placeholder="R$ 0.00"
             type={"number"}

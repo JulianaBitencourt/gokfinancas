@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  align-items: center;
-  text-align: center;
+  display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 3rem;
   h2 {
     margin: 2rem;
@@ -17,6 +18,10 @@ export const Button = styled.button`
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 0.4rem;
   margin: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   width: 100%;
   background-color: ${(props) => props.theme.primary};
   border-radius: 0.7rem;
@@ -24,6 +29,9 @@ export const Button = styled.button`
   border: none;
   color: ${(props) => props.theme.background};
   font-size: 1.3rem;
+  :active {
+    background-color: #fff;
+  }
 `;
 
 export const Selects = styled.section`
@@ -36,10 +44,8 @@ export const Modalidade = styled.section`
   flex-direction: row;
   align-items: center;
   text-align: center;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  width: 40rem;
   @media (max-width: 800px) {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    width: 100%;
   }
 `;

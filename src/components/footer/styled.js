@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  text-align: end;
+  text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;

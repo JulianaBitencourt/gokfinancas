@@ -6,7 +6,7 @@ export const Container = styled.div`
   border-style: solid;
   border-color: ${(props) => props.theme.foreground};
   border-radius: 1rem;
-  width: 40rem;
+  width: 50rem;
   @media (max-width: 600px) {
     width: 100%;
   }
@@ -44,7 +44,7 @@ export const Result = styled.h2`
 export const Linha = styled.section`
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
   display: flex;
   flex-wrap: wrap;

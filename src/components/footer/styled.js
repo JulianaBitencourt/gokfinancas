@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
-  justify-content: end;
+  /* position: absolute; */
   bottom: 0;
-  left: 0;
-  flex-direction: row;
+  width: 100%;
+  height: 2.5rem;  
 `;
 
 export const Logo = styled.img`

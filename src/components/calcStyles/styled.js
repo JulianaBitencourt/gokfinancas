@@ -18,7 +18,7 @@ export const Container = styled.div`
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border: none;
     color: ${(props) => props.theme.background};
-    background-color: #fff;
+    background-color: ${(props) => props.theme.backgroundLight};
   }
 `;
 
@@ -60,5 +60,5 @@ export const ContainerInput = styled.div`
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border: none;
   color: ${(props) => props.theme.background};
-  background-color: #fff;
+  background-color: ${(props) => props.theme.backgroundLight};
 `;

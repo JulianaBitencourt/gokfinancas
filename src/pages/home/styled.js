@@ -12,6 +12,15 @@ export const Container = styled.section`
   h4 {
     margin: 1rem;
   }
+  .sign-in.click{
+  background-color:${(props) => props.theme.foreground};
+  color:${(props) => props.theme.text};
+}
+
+.sign-up.click{
+  background-color: ${(props) => props.theme.foreground};
+  color:${(props) => props.theme.text};
+}
 `;
 
 export const Button = styled.button`
@@ -29,9 +38,6 @@ export const Button = styled.button`
   border: none;
   color: ${(props) => props.theme.background};
   font-size: 1.3rem;
-  :active {
-    background-color: #fff;
-  }
 `;
 
 export const Selects = styled.section`

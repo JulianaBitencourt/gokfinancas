@@ -5,6 +5,7 @@ export const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   margin: 3rem;
   h2 {
     margin: 2rem;
@@ -28,8 +29,6 @@ export const Button = styled.button`
   padding: 0.4rem;
   margin: 1rem;
   display: flex;
-  align-items: center;
-  text-align: center;
   justify-content: center;
   width: 100%;
   background-color: ${(props) => props.theme.primary};
@@ -48,8 +47,6 @@ export const Selects = styled.section`
 
 export const Modalidade = styled.section`
   flex-direction: row;
-  align-items: center;
-  text-align: center;
   width: 40rem;
   @media (max-width: 800px) {
     width: 100%;

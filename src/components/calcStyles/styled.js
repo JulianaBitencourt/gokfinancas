@@ -39,6 +39,8 @@ export const Button = styled.button`
 `;
 export const Result = styled.h2`
   text-align: center;
+  padding: 0.9rem;
+  background-color: ${(props) => props.theme.background};
 `;
 
 export const Linha = styled.section`

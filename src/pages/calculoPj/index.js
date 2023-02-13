@@ -69,13 +69,15 @@ export default function CalculoClt() {
         <>
           <Button onClick={() => calculo()}>Calcular</Button>
 
-          <Result>
-            Total:{" "}
-            {resultado?.toLocaleString("pt-BR", {
-              style: "currency",
-              currency: "BRL",
-            })}
-          </Result>
+          {resultado && (
+            <Result>
+              Total:{" "}
+              {resultado?.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            </Result>
+          )}
         </>
       ) : null}
     </Container>

@@ -13,7 +13,7 @@ export default function CalculoClt() {
   const [salario, setSalario] = useState("");
   const [beneficio, setBeneficio] = useState("");
   const [outros, setOutros] = useState("");
-  const [resultado, setResultado] = useState("");
+  const [resultado, setResultado] = useState(null);
 
   function calculo() {
     const convertSalary = parseFloat(
@@ -65,15 +65,19 @@ export default function CalculoClt() {
           />
         </div>
       </Linha>
-      <Button onClick={() => calculo()}>Calcular</Button>
+      {salario && beneficio ? (
+        <>
+          <Button onClick={() => calculo()}>Calcular</Button>
 
-      <Result>
-        Total:{" "}
-        {resultado.toLocaleString("pt-BR", {
-          style: "currency",
-          currency: "BRL",
-        })}
-      </Result>
+          <Result>
+            Total:{" "}
+            {resultado?.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </Result>
+        </>
+      ) : null}
     </Container>
   );
 }

@@ -66,14 +66,19 @@ export default function CalculoClt() {
           </Titulo>
         </div>
       </Linha>
-      <Button onClick={() => calculo()}>Calcular</Button>
-      <Result>
-        Total:{" "}
-        {resultado.toLocaleString("pt-BR", {
-          style: "currency",
-          currency: "BRL",
-        })}
-      </Result>
+      {salario && beneficio ? (
+        <>
+          <Button onClick={() => calculo()}>Calcular</Button>
+
+          <Result>
+            Total:{" "}
+            {resultado?.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </Result>
+        </>
+      ) : null}
     </Container>
   );
 }

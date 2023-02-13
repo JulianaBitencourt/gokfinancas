@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import CurrencyInput from './../../components/input-currency/currencyInput'
+import CurrencyInput from "./../../components/input-currency/currencyInput";
 import {
   Titulo,
   Linha,
@@ -15,7 +15,21 @@ export default function CalculoClt() {
   const [outros, setOutros] = useState("");
   const [resultado, setResultado] = useState("");
 
-  const calculo = () => {};
+  function calculo() {
+    const convertSalary = parseFloat(
+      salario.replace("R$", "").replace(",", "")
+    );
+
+    const convertBenefits = parseFloat(
+      beneficio.replace("R$", "").replace(",", "")
+    );
+
+    const convertOthers = parseFloat(outros.replace("R$", "").replace(",", ""));
+
+    const result = convertSalary + convertBenefits + convertOthers;
+
+    setResultado(result);
+  }
 
   return (
     <Container>
@@ -26,7 +40,7 @@ export default function CalculoClt() {
             className="inputs"
             placeholder="R$ 0.00"
             type={"text"}
-            // value={salario}
+            value={salario}
             onChange={(e) => setSalario(e.target.value)}
           />
         </div>
@@ -36,7 +50,7 @@ export default function CalculoClt() {
             className="inputs"
             placeholder="R$ 0.00"
             type={"text"}
-            // value={beneficio}
+            value={beneficio}
             onChange={(e) => setBeneficio(e.target.value)}
           />
         </div>
@@ -46,14 +60,20 @@ export default function CalculoClt() {
             className="inputs"
             placeholder="R$ 0.00"
             type={"text"}
-            // value={outros}
+            value={outros}
             onChange={(e) => setOutros(e.target.value)}
           />
         </div>
       </Linha>
-      <Button onClick={calculo}>Calcular</Button>
+      <Button onClick={() => calculo()}>Calcular</Button>
 
-      <Result>Total: R${resultado}</Result>
+      <Result>
+        Total:{" "}
+        {resultado.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })}
+      </Result>
     </Container>
   );
 }

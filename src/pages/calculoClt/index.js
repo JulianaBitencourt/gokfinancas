@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import CurrencyInput from './../../components/input-currency/currencyInput'
+import CurrencyInput from "./../../components/input-currency/currencyInput";
 import {
   Titulo,
   Linha,
@@ -10,13 +10,27 @@ import {
 } from "./../../components/calcStyles/styled";
 
 export default function CalculoClt() {
-  const [salario, setSalario] = useState(0);
+  const [salario, setSalario] = useState("");
   const [beneficio, setBeneficio] = useState("");
-  const [imposto, setImposto] = useState(0);
-  const [resultado, setResultado] = useState("");
+  const [imposto, setImposto] = useState("");
+  const [resultado, setResultado] = useState(null);
 
-  const calculo = () => {};
+  function calculo() {
+    const convertSalary = parseFloat(
+      salario.replace("R$", "").replace(",", "")
+    );
 
+    const convertBenefits = parseFloat(
+      beneficio.replace("R$", "").replace(",", "")
+    );
+
+    const tax = (convertSalary * 70) / 100;
+
+    setImposto(tax);
+
+    const result = convertSalary + tax + convertBenefits;
+    setResultado(result);
+  }
   return (
     <Container>
       <Linha>
@@ -27,7 +41,8 @@ export default function CalculoClt() {
             className="inputs"
             placeholder="R$ 0.00"
             type={"text"}
-            // value={salario}
+            value={salario}
+            inputMode={"numeric"}
             onChange={(e) => setSalario(e.target.value)}
           />
         </div>
@@ -37,17 +52,28 @@ export default function CalculoClt() {
             className="inputs"
             placeholder="R$ 0.00"
             type={"text"}
-            // value={beneficio}
+            value={beneficio}
             onChange={(e) => setBeneficio(e.target.value)}
           />
         </div>
         <div>
           <Titulo>Imposto + Benefício</Titulo>
-          <Titulo>R$ {imposto}</Titulo>
+          <Titulo>
+            {imposto.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </Titulo>
         </div>
       </Linha>
-      <Button onClick={calculo}>Calcular</Button>
-      <Result>Total: R$ {resultado}</Result>
+      <Button onClick={() => calculo()}>Calcular</Button>
+      <Result>
+        Total:{" "}
+        {resultado.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })}
+      </Result>
     </Container>
   );
 }

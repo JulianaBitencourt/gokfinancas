@@ -26,7 +26,8 @@ export default function CalculoClt() {
 
     const convertOthers = parseFloat(outros.replace("R$", "").replace(",", ""));
 
-    const result = convertSalary + convertBenefits + (convertOthers || 0);
+    const result =
+      convertSalary + (convertBenefits || 0) + (convertOthers || 0);
 
     setResultado(result);
   }
@@ -65,7 +66,7 @@ export default function CalculoClt() {
           />
         </div>
       </Linha>
-      {salario && beneficio ? (
+      {salario && (
         <>
           <Button onClick={() => calculo()}>Calcular</Button>
 
@@ -79,7 +80,7 @@ export default function CalculoClt() {
             </Result>
           )}
         </>
-      ) : null}
+      )}
     </Container>
   );
 }

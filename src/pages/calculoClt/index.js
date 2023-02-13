@@ -28,7 +28,7 @@ export default function CalculoClt() {
 
     setImposto(tax);
 
-    const result = convertSalary + tax + convertBenefits;
+    const result = convertSalary + tax + (convertBenefits || 0);
     setResultado(result);
   }
   return (
@@ -66,7 +66,7 @@ export default function CalculoClt() {
           </Titulo>
         </div>
       </Linha>
-      {salario && beneficio ? (
+      {salario && (
         <>
           <Button onClick={() => calculo()}>Calcular</Button>
 
@@ -80,7 +80,7 @@ export default function CalculoClt() {
             </Result>
           )}
         </>
-      ) : null}
+      )}
     </Container>
   );
 }

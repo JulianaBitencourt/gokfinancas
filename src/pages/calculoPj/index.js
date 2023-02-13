@@ -26,7 +26,7 @@ export default function CalculoClt() {
 
     const convertOthers = parseFloat(outros.replace("R$", "").replace(",", ""));
 
-    const result = convertSalary + convertBenefits + convertOthers;
+    const result = convertSalary + convertBenefits + (convertOthers || 0);
 
     setResultado(result);
   }
